@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: hsl(27, 66%, 92%);
+      font-size: 18px;
+    }
+    .balance{
+      width: 37%;
+      background-color: hsl(10, 79%, 65%);
+      border-radius: 20px;
+    }
+    .img-fluid{
+      width: 80px;
+    }
+    .spend{
+      width: 37%;
+      background-color: white;
+      border-radius: 20px;
+    }
+    .progress{
+      width: 45px;
+      height: 240px ;
+      background: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .chart{
+      background-color: hsl(10, 79%, 65%);
+      border-radius: 10px;
+      width: 100%;
+    }
+    .dollar {
+      display: none;
+    }
+    .chart:hover{
+      opacity: 0.6;
+    }
+
+    .wed{
+      background-color: hsl(186, 34%, 60%);
+    }
+    @media (max-width:1000px) {
+      .balance, .spend{
+        width: 50%;
+      }
+    }
+    @media (max-width:768px) {
+      .balance, .spend{
+        width: 70%;
+      }
+    }
+    @media (max-width:500px) {
+      body{
+        width: 100vw;
+      }
+      .balance, .spend{
+        width: 90%;
+      }
+      .progress{
+        width: 37px;
+      }
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+ <div class="balance p-4 mb-4 d-flex justify-content-between text-white">
+    <div>
+      <p class="m-0 p-0">My balance</hp>
+      <h1 class="h3 fw-bold">  $921.48</h1>
+    </div>
+    <img src="./images/logo.svg" alt="" class="img-fluid">
+</div>
+
+  <div class="spend p-4 text-black">
+    <h1 class="h3 fw-bold">Spending - Last 7 days</h1>
+    <div class="expContainer d-flex justify-content-between align-items-end">
+      
+    </div>
+ 
+    <div class="d-flex justify-content-between align-items-end">
+      <div>
+        <p class="m-0">Total this month</p>
+        <h1 class="fw-bold">$478.33</h1>
+      </div>
+  
+      <div>
+        <p class="fw-bold m-0">+2.4%</p>
+        <p>from last month</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/thidarnyien">Thidar Nyein</a>.
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
